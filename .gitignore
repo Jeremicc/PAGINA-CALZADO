@@ -1,22 +1,97 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
-.vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-file
-*.flf
-#Test results file
-TestResults.xml
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calzados Antonella</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calzados Antonella</h1>
+        <p>Discutirán los mayores edictos para ti</p>
+    </header>
+
+    <!-- Botones de categorías -->
+    <nav class="categorias">
+        <button class="categoria-btn active" data-categoria="todos">Todos</button>
+        <button class="categoria-btn" data-categoria="sandalias">Sandalias</button>
+        <button class="categoria-btn" data-categoria="botas">Botas</button>
+        <button class="categoria-btn" data-categoria="botines">Botines</button>
+        <button class="categoria-btn" data-categoria="raina">Raina</button>
+    </nav>
+
+    <!-- Sección de Productos -->
+    <section class="productos">
+        <!-- Producto 1: Bota -->
+        <div class="producto" data-categoria="botas">
+            <img src="images/bota.jpg" alt="Bota">
+            <h2>Bota</h2>
+            <p>Talla 34</p>
+            <p>Colores Disponibles: Negro, Blanco, Cambi, Beige, Hueso</p>
+            <p>Ideal para ocasiones específicas</p>
+            <p class="precio">$100.000</p>
+            <button class="agregar-carrito" data-nombre="Bota" data-precio="100000">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 2: Botín -->
+        <div class="producto" data-categoria="botines">
+            <img src="images/botin.jpg" alt="Botín">
+            <h2>Botín</h2>
+            <p>Talla 38</p>
+            <p>Colores Disponibles: Negro, Blanco, Cambi</p>
+            <p>Blanco con plateado</p>
+            <p class="precio">$75.000</p>
+            <button class="agregar-carrito" data-nombre="Botín" data-precio="75000">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 3: Sandalia Plana -->
+        <div class="producto" data-categoria="sandalias">
+            <img src="images/sandalia.jpg" alt="Sandalia Plana">
+            <h2>Sandalia Plana</h2>
+            <p>Talla 37</p>
+            <p>Sandalia con planta, perfecta para el verano.</p>
+            <p class="precio">$255.000</p>
+            <button class="agregar-carrito" data-nombre="Sandalia Plana" data-precio="255000">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 4: Raina -->
+        <div class="producto" data-categoria="raina">
+            <img src="images/raina1.jpg" alt="Raina 1">
+            <h2>Raina Elegante</h2>
+            <p>Talla 36</p>
+            <p>Colores Disponibles: Negro, Beige</p>
+            <p>Perfecta para eventos formales.</p>
+            <p class="precio">$180.000</p>
+            <button class="agregar-carrito" data-nombre="Raina Elegante" data-precio="180000">Agregar al carrito</button>
+        </div>
+
+        <!-- Agrega más productos aquí -->
+    </section>
+
+    <!-- Botones de paginación -->
+    <div class="paginacion">
+        <button id="anterior">Anterior</button>
+        <span id="pagina-actual">1</span>
+        <button id="siguiente">Siguiente</button>
+    </div>
+
+    <!-- Carrito de compras -->
+    <div class="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total-carrito">0</span></p>
+        <button id="enviar-whatsapp">Enviar pedido por WhatsApp</button>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <h2>Contacto</h2>
+        <p>Para más información, contáctanos:</p>
+        <p>Teléfono: +57 123 456 7890</p>
+        <p>Email: info@calzadosantonella.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
